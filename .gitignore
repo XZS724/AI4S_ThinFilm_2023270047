@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Jupyter / editor
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# NOTE: dataset.npz, the *.pth checkpoints and the PNG figures ARE committed on
+# purpose — they are small (~5 MB in total) and let a reader verify the numbers
+# in Table 1 and Figures 4-8 without retraining.

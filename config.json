@@ -1,0 +1,54 @@
+{
+  "student_id": "2023270047",
+  "last_two_digits_N": 47,
+  "lambda_target_nm": 610,
+  "seed": 270047,
+  "design_seed": 270048,
+  "github_user": "XZS724",
+  "repo_name": "AI4S_ThinFilm_2023270047",
+  "structure": "Air / H / L / H / L / Glass (4 layers)",
+  "nH": 2.3,
+  "nL": 1.45,
+  "ns": 1.52,
+  "n0": 1.0,
+  "thickness_range_nm": [
+    40.0,
+    180.0
+  ],
+  "wavelength_range_nm": [
+    400,
+    800
+  ],
+  "wavelength_step_nm": 10,
+  "num_wavelengths": 41,
+  "target_index": 21,
+  "dataset_size": 5000,
+  "split": {
+    "train": 4000,
+    "validation": 500,
+    "test": 500
+  },
+  "mlp_architecture": [
+    4,
+    128,
+    128,
+    64,
+    41
+  ],
+  "training": {
+    "optimizer": "Adam",
+    "lr": 0.001,
+    "batch_size": 64,
+    "epochs_main": 2000,
+    "epochs_training_size_study": 1000,
+    "loss": "MSE",
+    "early_stopping": "best validation loss"
+  },
+  "screening": {
+    "n_candidates": 10000,
+    "top_k_ranked_by_mlp": 10,
+    "final_top": 5,
+    "candidate_seed": 270048
+  },
+  "data_file": "data/dataset.npz"
+}
